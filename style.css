@@ -1,9 +1,11 @@
+/* reset default settings of all elements*/
 *{
     padding:0px;
     margin:0px;
     box-sizing: border-box;
 }
 
+/* this where the navigation*/
 nav{
     display: flex;
     justify-content: center;
@@ -27,4 +29,27 @@ nav a{
     text-decoration: none;
     color: #2d2d2d;
     text-transform: uppercase;
+}
+
+/* this where the main start*/
+
+main{
+    margin: 1em;
+    height: 90vh;
+    background-color: aliceblue;
+    box-shadow: 0 0 5px grey;   
+    display: flex;
+    flex-direction: row;
+    padding: .50em;
+}
+#landing-pic{
+    background-image: url("profile.jpg");
+    background-color: blue;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 80vw;
+    height: 50vh;
+    margin-left: auto;
+    margin-right: auto;
 }
