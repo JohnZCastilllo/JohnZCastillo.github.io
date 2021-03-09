@@ -19,6 +19,7 @@ nav ul{
     display: flex;
     align-items: center;
     gap: 2em;
+    overflow: hidden;
 }
 
 nav li{
@@ -32,24 +33,41 @@ nav a{
 }
 
 /* this where the main start*/
-
 main{
-    margin: 1em;
-    height: 90vh;
-    background-color: aliceblue;
-    box-shadow: 0 0 5px grey;   
     display: flex;
-    flex-direction: row;
-    padding: .50em;
+    margin: 2em;
+    height: 100vh;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0 5px grey;
+    overflow: hidden;
 }
-#landing-pic{
-    background-image: url("profile.jpg");
-    background-color: blue;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    width: 80vw;
-    height: 50vh;
-    margin-left: auto;
-    margin-right: auto;
+
+#work{
+    background-color: #fcc05c;
+    width: 100%;
+    height: 33.33%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#about{
+    background-color: #fcbd15;
+    width: 100%;
+    height: 33.33%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#contact{
+    background-color: #f8730e;
+    width: 100%;
+    height: 33.33%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
