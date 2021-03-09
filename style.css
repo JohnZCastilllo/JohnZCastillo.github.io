@@ -9,8 +9,6 @@
 }
 body{
     background-color: #49274a;
-    width: 100vw;
-    height: 100vh;
 }
 /* this where the navigation*/
 nav{
@@ -20,7 +18,7 @@ nav{
     background-color: #ffff;
     overflow: hidden;
     height: 20vh;
-    min-width: 443px;
+    width: 100vw;
 }
 
 nav p{
@@ -34,7 +32,7 @@ main{
     display: flex;
     align-items: center;
     justify-content: center;
-    border-style: solid;
+    overflow: hidden;
 }
 
 .box{
@@ -50,7 +48,6 @@ main{
 
 .box h1{
  color: #ff6600;
- margin-bottom: .2em;
  line-height: 2rem;
  text-align: center;
 }
@@ -69,6 +66,9 @@ main{
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        overflow: hidden;
     } 
+   
+    
 }
 
