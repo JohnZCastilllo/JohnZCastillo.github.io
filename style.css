@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@500&display=swap');
+
 /* reset default settings of all elements*/
 *{
     padding:0px;
@@ -5,32 +7,24 @@
     box-sizing: border-box;
     font-family: sans-serif;
 }
-
+body{
+    background-color: #49274a;
+}
 /* this where the navigation*/
 nav{
     display: flex;
     justify-content: center;
-    padding: 1em;
-    background-color: #ffffff;
-    overflow: hidden;
-    box-shadow: 0px 0px 5px grey;
-}
-
-nav ul{
-    display: flex;
     align-items: center;
-    gap: 2em;
+    background-color: #ffff;
     overflow: hidden;
+    height: 20vh;
+    min-width: 443px;
 }
 
-nav li{
-    list-style: none;
-}
-
-nav a{
-    text-decoration: none;
-    color: #2d2d2d;
-    text-transform: uppercase;
+nav p{
+    font-size: 2.5rem;
+    color: #49274a;
+    font-family: 'Noto Sans SC', sans-serif;
 }
 
 /* this where the main start*/
@@ -43,24 +37,34 @@ main{
 
 .box{
     width: min(90%,600px);
-    box-shadow: 0 0 3px rgb(0,0,0,.15);
+    box-shadow: 0 2 5px black;
     padding: 1em;
     margin: 1em;
     overflow: hidden;
-    line-height: 1.5rem;
+    background-color: white;
+    border-radius: 20px;
 }
 
 
 .box h1{
  color: #ff6600;
  margin-bottom: .2em;
+ line-height: 2rem;
+ text-align: center;
 }
+
 .box p{
     color: #2d2d2d;
+    line-height: 1.5rem;
 }
+ #more{
+    color: #ff6600;
+}
+
 @media screen and (max-width:600px) and (min-width:0px){
     main{
         display: flex;
         flex-direction: column;
     } 
 }
+
