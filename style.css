@@ -9,6 +9,8 @@
 }
 body{
     background-color: #49274a;
+    width: 100vw;
+    height: 100vh;
 }
 /* this where the navigation*/
 nav{
@@ -32,12 +34,12 @@ main{
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 1em;
+    border-style: solid;
 }
 
 .box{
-    width: min(90%,600px);
-    box-shadow: 0 2 5px black;
+    min-width: 400;
+    max-width: 600px;
     padding: 1em;
     margin: 1em;
     overflow: hidden;
@@ -65,6 +67,8 @@ main{
     main{
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
     } 
 }
 
