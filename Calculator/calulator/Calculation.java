@@ -68,7 +68,7 @@ public class Calculation {
     			case "*":
     				return x.multiply(y);
     			case "/":
-    				return x.divide(y);
+    				return x.divide(y,2, RoundingMode.HALF_UP);
     			case "%":
     				BigDecimal temp = x.divide(new BigDecimal(100));
     				System.out.println ("Result: "+temp);

@@ -4,6 +4,7 @@ import javax.swing.JPanel;
 import java.awt.event.*; 
 import java.awt.FlowLayout;
 import javax.swing.JButton;
+import javax.swing.UIManager;
 
 public class MainFrame {
 	
@@ -47,7 +48,12 @@ public class MainFrame {
     	frame.getContentPane().add(new MyButton("=","result").getButton());
      	frame.getContentPane().add(new MyButton("/","normal").getButton());	
     	
-     				
+     	try { 
+		    UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+		} catch (Exception e) {
+		    e.printStackTrace();
+		}	
+				
     	frame.setResizable(false);
 	    frame.pack();
 	    frame.setLocationRelativeTo(null);
