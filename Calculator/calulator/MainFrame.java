@@ -42,7 +42,7 @@ public class MainFrame {
     	frame.getContentPane().add(new MyButton("7","normal").getButton());
      	frame.getContentPane().add(new MyButton("8","normal").getButton());	
     	frame.getContentPane().add(new MyButton("9","normal").getButton());
-     	frame.getContentPane().add(new MyButton("*","normal").getButton());	
+     	frame.getContentPane().add(new MyButton("x","normal").getButton());	
      	frame.getContentPane().add(new MyButton("0","normal").getButton());
     	frame.getContentPane().add(new MyButton(".","normal").getButton());
     	frame.getContentPane().add(new MyButton("=","result").getButton());
