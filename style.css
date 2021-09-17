@@ -11,8 +11,7 @@
     
     max-width: 1400px;
     width: 100vw;
-    margin: 0 auto;
-    background-color: #ff6600;    
+    margin: 0 auto; 
 }
 
 /* this where the navigation*/
@@ -21,7 +20,7 @@ nav{
     min-height: 5rem;
     background-color:#494850;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
 }
 
@@ -31,6 +30,7 @@ nav > p{
     font-family: 'Bebas Neue';
     letter-spacing: 1px;
     border: 1px solid white;
+    padding: 3px;
 }
 
 /* this where the main start*/
@@ -44,28 +44,34 @@ main{
 .box{
     min-width: 400;
     max-width: 600px;
-    padding: 1em;
-    margin: 1em;
-    overflow: hidden;
-    background-color: white;
-    border-radius: 20px;
+    width: 80vw;
+    margin: 1rem auto;
+    padding-bottom: .5rem;
+    border-bottom: 1.5px solid #2C2C34;
 }
 
 
 .box h1{
- color: #ff6600;
  line-height: 2rem;
- text-align: center;
+ font-family: 'Montserrat';
+ font-weight: 600;
+
 }
 
 .box p{
-    color: #2d2d2d;
     line-height: 1.5rem;
+    font-family: 'Montserrat';
 }
-.more{
-    color: #ff6600;
+.box > .more{
+    color: #494850;
+    cursor: pointer;
+
 }
 
+.box > .more:hover{
+    color: #2C2C34;
+    font-weight: bold;
+}
 @media screen and (max-width:600px) and (min-width:0px){
     main{
         display: flex;
