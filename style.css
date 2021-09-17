@@ -1,31 +1,32 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@500&display=swap');
 
 /* reset default settings of all elements*/
 *{
-    padding:0px;
-    margin:0px;
+    padding:0;
+    margin:0;
     box-sizing: border-box;
-    font-family: sans-serif;
-}
-body{
-    background-color: #49274a;
-}
-/* this where the navigation*/
-nav{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #ffff;
-    overflow: hidden;
-    height: 20vh;
-    width: 100vw;
-    background-color:#845EC2;
 }
 
-nav p{
-    font-size: 2.5rem;
-    color: #49274a;
-    font-family: 'Noto Sans SC', sans-serif;
+
+.container{
+    
+    max-width: 1400px;
+    width: 100vw;
+    margin: 0 auto;
+    background-color: #ff6600;    
+}
+
+/* this where the navigation*/
+nav{
+    width: 100%;
+    text-align: center;
+    background-color:#494850;
+}
+
+nav > p{
+    padding: 1rem 0;
+    font-size: 2rem;
+    color: white;
+    font-family: font-family: 'Bebas Neue';
 }
 
 /* this where the main start*/
