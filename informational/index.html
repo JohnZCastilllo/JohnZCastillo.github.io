@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>HTML | JOHN CASTILLO</title>
+  </head>
+  <body>
+    <nav class="nav wrapper">
+      <span>John Z Castillo</span>
+      <a href="#home" class="nav__link">Home</a>
+      <a href="#about" class="nav__link">About</a>
+      <a href="#tags" class="nav__link">Tags</a>
+      <a href="#layout" class="nav__link">Layout</a>
+      <a href="#display" class="nav__link">Display</a>
+    </nav>
+
+    <section class="hero wrapper" id="home">
+      <div class="hero__text">
+        <h1>HTML</h1>
+        <p>The building block of the web</p>
+      </div>
+      <img src="images/html.png" alt="html icon" class="hero__img" />
+    </section>
+
+    <section class="content even wrapper" id="about">
+      <div>
+        <img class="content__img" src="images/html1.png" alt="html" />
+      </div>
+      <div>
+        <h2>What is HTMl?</h2>
+        <p>
+          HTML is the standard markup language for creating Web pages. It
+          describes the structure of a Web page. HTML consists of a series of
+          elements that tell the browser how to display the content.
+        </p>
+      </div>
+    </section>
+
+    <section id="tags" class="content wrapper">
+      <div>
+        <img class="content__img" src="images/tag.png" alt="tag" />
+      </div>
+      <div>
+        <h2>What is an HTML Element?</h2>
+        <p>
+          An HTML element is defined by a start tag, some content, and an end
+          tag:
+          <span class="code"
+            >&lt;tagname&gt; Content goes here... &lt;/header&gt;</span
+          >
+          The HTML element is everything from the start tag to the end tag:
+        </p>
+      </div>
+    </section>
+
+    <section class="content even wrapper" id="layout">
+      <div>
+        <img class="layout" src="images/layout.gif" alt="html layout" />
+      </div>
+      <div class="layout__text">
+        <h2>HTML Basic Layout</h2>
+        <ul>
+          <li>
+            <span>&lt;header&gt; </span> - Defines a header for a document or a
+            section
+          </li>
+          <li><span>&lt;nav&gt;</span> - Defines a set of navigation links</li>
+          <li><span>&lt;section&gt</span> - Defines a section in a document</li>
+          <li>
+            <span>&lt;article&gt;</span>
+            - Defines an independent, self-contained content
+          </li>
+          <li>
+            <span>&lt;aside&gt;</span>
+            - Defines content aside from the content (like a sidebar)
+          </li>
+          <li>
+            <span>&lt;footer&gt;</span>
+            - Defines a footer for a document or a section
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="content wrapper" id="display">
+      <div>
+        <img class="content__img" src="images/browser.png" alt="browser" />
+      </div>
+      <div>
+        <h2>Where to display html</h2>
+        <p>
+          The purpose of a web browser (Chrome, Edge, Firefox, Safari) is to
+          read HTML documents and display them correctly. A browser does not
+          display the HTML tags, but uses them to determine how to display the
+          document:
+        </p>
+      </div>
+    </section>
+
+    <footer class="wrapper">
+      <h2>References</h2>
+      <a href="https://www.w3schools.com/html/html_intro.asp"
+        >W3 School Intro to HTML</a
+      >
+      <a href="https://www.flaticon.com/">icons</a>
+    </footer>
+  </body>
+</html>
