@@ -1,0 +1,138 @@
+/* Global styling */
+html{
+  scroll-behavior: smooth;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+section {
+  padding-block: 120px;
+}
+
+p {
+  font-family: "Poppins", sans-serif;
+}
+
+h2 {
+  font-family: "Lora", serif;
+}
+
+.wrapper {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.content {
+  padding-inline: 10%;
+  display: flex;
+}
+.content__img{
+  width: 120px;
+  height: auto;
+  margin-right:1em;
+}
+
+.even{
+  background-color: #cbf3f0;
+}
+
+
+/* Navigation*/
+.nav {
+  position: sticky;
+  top: 0;
+  padding-block: 20px;
+  background-color: #2ec4b6;
+  display: flex;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  padding-inline: 5%;
+}
+
+.nav> span{
+  margin-right: auto;
+  font-family: "Poppins", sans-serif;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.nav__link {
+  margin-left: 15px;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1.5rem;
+}
+
+/* Hero */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero__text > h1 {
+  text-align: center;
+  letter-spacing: 2px;
+  font-size: 3rem;
+  font-family: "Lora", serif;
+}
+.hero__img {
+  width: 250px;
+  height: auto;
+}
+
+/*Layout*/
+.layout{
+  width: 220px;
+  height: auto;
+  margin-right: 1em;
+}
+.layout__text > ul > li{
+  font-family: "Poppins", sans-serif;
+  list-style-type: none;
+}
+
+.layout__text > ul > li > span{
+  background-color: white;
+}
+
+/*footer*/
+footer{
+  background-color: #8ecae6;
+  padding-block: 50px;
+  text-align: center;
+}
+footer > a{
+  display: block;
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+}
+
+/* span that contains html elements as text*/
+.code{
+  background-color:  #8ecae6;
+}
+
+/* Mobile Screen */
+@media only screen and (max-width: 600px) {
+ .content{
+   flex-wrap: wrap;
+   justify-content: center;
+ }
+ .nav{
+   flex-wrap: wrap;
+ }
+ .nav > span{
+   flex-basis: 100%;
+   text-align: center;
+ }
+
+ .nav__link{
+   font-size: 1rem;
+ }
+}
