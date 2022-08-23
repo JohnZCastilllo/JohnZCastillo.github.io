@@ -1,47 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>    
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <title>My Profile</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootsrap -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
 
-    <div class="container">
-        <nav>
-            <p>My Personal Blog</p>
-        </nav>
-    
-    
-
-        <section>
-
-        <div class="box">
-                <h1>Hello World</h1>
-                <p>March 9 2021 marks the official lunch of this static website. hehehe</p>
-                <p class="more">more</p>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Custom css -->
+    <link rel="stylesheet" href="style.css" />
+    <title>John Castillo | Portfolio</title>
+  </head>
+  <body>
+    <div class="mx-auto" style="max-width: 1400px">
+      <!-- Navigation -->
+      <nav
+        class="shadow navbar navbar-expand-lg navbar-light bg-light sticky-top text-poppins"
+      >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNavAltMarkup"
+        >
+          <div class="navbar-nav">
+            <a class="nav-item nav-link text-dark" href="#">Home</a>
+            <a class="nav-item nav-link text-dark" href="#">Projects</a>
+            <a class="nav-item nav-link text-dark" href="#">Skills</a>
+            <a class="nav-item nav-link text-dark" href="#">Contacts</a>
+          </div>
         </div>
+      </nav>
 
-        <div class="box">
-                <h1>Content updater</h1>
-                <p>Mahimo ako java GUI na ma function as content updater. Sana mahimo</p>
-                <p class="more">more</p>
-        </div>
-
+      <!-- hero section -->
+      <div class="container-fluid vh-100">
+        <section class="hero">
+          <div
+            class="h-100 row bg-dark align-items-center justify-content-center"
+          >
+            <div
+              class="col-md col-md-5 order-1 text-center text-light text-md-right"
+            >
+              <h1 class="hero-text mb-0">Hi, I'm John</h1>
+              <p class="lead">I love to program</p>
+            </div>
+            <div class="col-md order-md-2">
+              <img
+                src="./id.png"
+                class="img-fluid mx-auto d-block profile bg-white rounded-circle"
+              />
+            </div>
+          </div>
         </section>
+      </div>
+
+      <!-- About Me -->
+
+      <!-- Projects -->
+
+      <!-- Skills -->
+
+      <!-- Contact Me -->
+
+      <!-- Footer -->
     </div>
-
-
-</body>
+  </body>
 </html>

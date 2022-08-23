@@ -1,2 +1,16 @@
 # JohnZCastillo.github.io
-Repository 
+
+Repository
+
+# todo
+
+- Navigation [/].
+- Hero [/].
+- Projects [].
+- Skills [].
+- Contact [].
+- Footer [].
+
+# script
+
+- Change Navigation bg on scroll
