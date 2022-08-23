@@ -8,7 +8,7 @@
 }
 
 .hero {
-  height: 100vh;
+  height: 100vh !important;
   max-height: 700px !important;
 }
 
