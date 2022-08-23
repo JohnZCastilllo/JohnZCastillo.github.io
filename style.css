@@ -1,86 +1,24 @@
-
-/* reset default settings of all elements*/
-*{
-    padding:0;
-    margin:0;
-    box-sizing: border-box;
+.profile {
+  max-width: 400px !important;
+  width: 90% !important;
 }
 
-
-.container{
-    
-    max-width: 1400px;
-    width: 100vw;
-    margin: 0 auto; 
+.hero {
+  height: 100vh;
+  max-height: 700px !important;
 }
 
-/* this where the navigation*/
-nav{
-    width: 100%;
-    min-height: 5rem;
-    background-color:#494850;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.hero-text {
+  font-size: 3rem;
+  font-family: "Poppins", sans-serif;
+  color: #9cd579;
 }
 
-nav > p{
-    font-size: 2rem;
-    color: white;
-    font-family: 'Bebas Neue';
-    letter-spacing: 1px;
-    border: 1px solid white;
-    padding: 3px;
+/* navigaton  */
+.fix-nav {
+  color: white !important;
 }
-
-/* this where the main start*/
-main{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
+.not-fix-nav {
+  background-color: darkgreen !important;
+  color: red !important;
 }
-
-.box{
-    min-width: 400;
-    max-width: 600px;
-    width: 80vw;
-    margin: 1rem auto;
-    padding-bottom: .5rem;
-    border-bottom: 1.5px solid #2C2C34;
-}
-
-
-.box h1{
- line-height: 2rem;
- font-family: 'Montserrat';
- font-weight: 600;
-
-}
-
-.box p{
-    line-height: 1.5rem;
-    font-family: 'Montserrat';
-}
-.box > .more{
-    color: #494850;
-    cursor: pointer;
-
-}
-
-.box > .more:hover{
-    color: #2C2C34;
-    font-weight: bold;
-}
-@media screen and (max-width:600px) and (min-width:0px){
-    main{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        overflow: hidden;
-    } 
-   
-    
-}
-
