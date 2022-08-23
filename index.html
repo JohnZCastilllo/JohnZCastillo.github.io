@@ -39,9 +39,11 @@
     <title>John Castillo | Portfolio</title>
   </head>
   <body>
-    <!-- Navigation -->
-    <div class="nav-wrapper sticky-top">
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="mx-auto" style="max-width: 1400px">
+      <!-- Navigation -->
+      <nav
+        class="shadow navbar navbar-expand-lg navbar-light bg-light sticky-top text-poppins"
+      >
         <button
           class="navbar-toggler"
           type="button"
@@ -58,61 +60,45 @@
           id="navbarNavAltMarkup"
         >
           <div class="navbar-nav">
-            <a class="nav-item nav-link active" href="#"
-              >Home <span class="sr-only">(current)</span></a
-            >
-            <a class="nav-item nav-link" href="#">Projects</a>
-            <a class="nav-item nav-link" href="#">Skills</a>
-            <a class="nav-item nav-link" href="#">Contacts</a>
+            <a class="nav-item nav-link text-dark" href="#">Home</a>
+            <a class="nav-item nav-link text-dark" href="#">Projects</a>
+            <a class="nav-item nav-link text-dark" href="#">Skills</a>
+            <a class="nav-item nav-link text-dark" href="#">Contacts</a>
           </div>
         </div>
       </nav>
-    </div>
 
-    <!-- hero section -->
-    <div class="container-fluid vh-100">
-      <section class="hero">
-        <div
-          class="h-100 row bg-dark align-items-center justify-content-center"
-        >
+      <!-- hero section -->
+      <div class="container-fluid vh-100">
+        <section class="hero">
           <div
-            class="col-md col-md-5 order-1 text-center text-light text-md-right"
+            class="h-100 row bg-dark align-items-center justify-content-center"
           >
-            <h1 class="hero-text mb-0">Hi, I'm John</h1>
-            <p class="lead">I love to program</p>
+            <div
+              class="col-md col-md-5 order-1 text-center text-light text-md-right"
+            >
+              <h1 class="hero-text mb-0">Hi, I'm John</h1>
+              <p class="lead">I love to program</p>
+            </div>
+            <div class="col-md order-md-2">
+              <img
+                src="./id.png"
+                class="img-fluid mx-auto d-block profile bg-white rounded-circle"
+              />
+            </div>
           </div>
-          <div class="col-md order-md-2">
-            <img
-              src="./id.png"
-              class="img-fluid mx-auto d-block profile bg-white rounded-circle"
-            />
-          </div>
-        </div>
-      </section>
+        </section>
+      </div>
+
+      <!-- About Me -->
+
+      <!-- Projects -->
+
+      <!-- Skills -->
+
+      <!-- Contact Me -->
+
+      <!-- Footer -->
     </div>
-
-    <!-- About Me -->
-
-    <!-- Projects -->
-
-    <!-- Skills -->
-
-    <!-- Contact Me -->
-
-    <!-- Footer -->
   </body>
-  <script>
-    // change navigation background on scroll
-    const nav = document.querySelector(".navbar-wrapper");
-
-    window.onscroll = () => {
-      // stick position
-      if (window.scrollY <= 30) {
-        nav.classList.add("bg-dark");
-      } else {
-        // not sticky
-        nav.classList.remove("bg-dark");
-      }
-    };
-  </script>
 </html>
