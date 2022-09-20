@@ -22,6 +22,7 @@
 
       <div class="d-flex flex-wrap align-items-center" style="gap: 5px">
         <button class="btn btn-primary today">Today</button>
+        <button class="btn btn-warning tom">Tomorrow</button>
         <button class="btn btn-secondary all">Schedule</button>
       </div>
 
@@ -158,6 +159,7 @@
     // Btn
     const viewTodayBtn = document.querySelector(".today");
     const viewAllBtn = document.querySelector(".all");
+    const viewTomBtn = document.querySelector(".tom");
 
     // wrapper
     const schedule = document.querySelector(".schedule");
@@ -176,6 +178,9 @@
 
     // hide schedule that are not for today
     const viewScheduleToday = () => {
+      // refresh list
+      viewAll();
+
       Object.keys(schedule.children).forEach((key) => {
         if (!schedule.children[key].classList.contains(days[today.getDay()])) {
           schedule.children[key].classList.add("hide");
@@ -183,17 +188,30 @@
       });
     };
 
+    // hide schedule that are not for tomorrow
+    const viewScheduleTomorrow = () => {
+      // refresh list
+      viewAll();
+
+      let now = today.getDay();
+      let tom = now === 6 ? 0 : now + 1;
+
+      Object.keys(schedule.children).forEach((key) => {
+        if (!schedule.children[key].classList.contains(days[tom])) {
+          schedule.children[key].classList.add("hide");
+        }
+      });
+    };
     // show all schedule
     const viewAll = () => {
       Object.keys(schedule.children).forEach((key) => {
-        if (!schedule.children[key].classList.contains(days[today.getDay()])) {
-          schedule.children[key].classList.remove("hide");
-        }
+        schedule.children[key].classList.remove("hide");
       });
     };
 
     // Setup event listener for btn
     viewTodayBtn.addEventListener("click", viewScheduleToday);
     viewAllBtn.addEventListener("click", viewAll);
+    viewTomBtn.addEventListener("click", viewScheduleTomorrow);
   </script>
 </html>
