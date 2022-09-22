@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BSIT 3-4 | Todo</title>
+
+    <!-- Bootsrap -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+    />
+    <!-- Custom css -->
+    <link rel="stylesheet" href="custom.css" />
+  </head>
+  <body>
+    <div class="container-fluid mx-auto" style="max-width: 1400px">
+      <h1 class="text-center">Todo</h1>
+      <!-- wrappper for todos -->
+      <div class="container-fluid wrapper">
+        <!-- Buttons -->
+        <div class="d-flex flex-wrap align-items-center" style="gap: 10px">
+          <button
+            class="btn btn-primary"
+            data-toggle="modal"
+            data-target="#todoModal"
+          >
+            Add
+          </button>
+          <a href="index.html" class="btn btn-secondary">Schedule</a>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal" tabindex="-1" role="dialog" id="todoModal">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">Todo</h5>
+                <button
+                  type="button"
+                  class="close"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <form class="form" action="">
+                  <div class="form-group">
+                    <label for="title">Subject</label>
+                    <input
+                      type="text"
+                      name="subject"
+                      required
+                      id="todoSubject"
+                      class="form-control"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="message">Message</label>
+                    <input
+                      type="text"
+                      name="message"
+                      required
+                      class="form-control"
+                      id="todoMessage"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="deadline">Deadline</label>
+                    <input
+                      type="date"
+                      name="deadline"
+                      class="form-control"
+                      id="todoDeadline"
+                    />
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary submit-btn">
+                  Save
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-dismiss="modal"
+                >
+                  Cancel
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Todo -->
+        <div class="container-fluid">
+          <div class="todos py-3 d-flex flex-wrap" style="gap: 20px">
+            <!-- Generate Todos here -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Boostrap Js -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      // form and btn
+      const form = document.querySelector(".form");
+      const submitBtn = document.querySelector(".submit-btn");
+      const todoWrapper = document.querySelector(".todos");
+
+      // value in form
+      const todoSubject = document.querySelector("#todoSubject");
+      const todoMessage = document.querySelector("#todoMessage");
+      const todoDeadline = document.querySelector("#todoDeadline");
+
+      // submit form
+      const submitForm = async (event) => {
+        event.preventDefault();
+
+        try {
+          const todos = await fetch("https://todo-api-ks5m.onrender.com", {
+            method: "POST",
+            headers: {
+              Accept: "application/json",
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              subject: todoSubject.value,
+              message: todoMessage.value,
+              deadline: todoDeadline.value,
+              status: false,
+            }),
+          });
+          console.log(await todos.json());
+          getTodos();
+        } catch (error) {
+          console.log(error.message);
+        }
+      };
+
+      const getTodos = async () => {
+        try {
+          const result = await fetch("https://todo-api-ks5m.onrender.com");
+          renderTodos(await result.json());
+        } catch (error) {
+          console.log(error.message);
+        }
+      };
+
+      const renderTodos = ({ todos }) => {
+        // remove all element in wrapper
+        todoWrapper.innerHTML = "";
+
+        console.log(typeof todos);
+
+        // render todos from array
+        todos.forEach((todo) => {
+          const card = document.createElement("div");
+          card.classList.add("card");
+          card.classList.add("shadow-sm");
+          card.classList.add("p3");
+
+          const cardBody = document.createElement("div");
+          cardBody.classList.add("card-body");
+          const cardTitle = document.createElement("h3");
+          cardTitle.classList.add("card-title");
+          const cardMessage = document.createElement("p");
+          cardMessage.classList.add("card-text");
+          cardMessage.classList.add("text-secondary");
+
+          cardTitle.innerText = todo.message;
+          cardMessage.innerText = todo.subject;
+
+          cardBody.appendChild(cardTitle);
+          cardBody.appendChild(cardMessage);
+
+          card.appendChild(cardBody);
+
+          todoWrapper.appendChild(card);
+        });
+      };
+
+      // subnmit form
+      submitBtn.addEventListener("click", submitForm);
+      getTodos();
+    </script>
+  </body>
+</html>
