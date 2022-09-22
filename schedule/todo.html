@@ -19,6 +19,7 @@
       <h1 class="text-center">Todo</h1>
       <!-- wrappper for todos -->
       <div class="container-fluid wrapper">
+        <!-- Buttons -->
         <div class="d-flex flex-wrap align-items-center" style="gap: 10px">
           <button
             class="btn btn-primary"
@@ -30,6 +31,7 @@
           <a href="index.html" class="btn btn-secondary">Schedule</a>
         </div>
 
+        <!-- Modal -->
         <div class="modal" tabindex="-1" role="dialog" id="todoModal">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -52,6 +54,7 @@
                       type="text"
                       name="subject"
                       required
+                      id="todoSubject"
                       class="form-control"
                     />
                   </div>
@@ -62,11 +65,17 @@
                       name="message"
                       required
                       class="form-control"
+                      id="todoMessage"
                     />
                   </div>
                   <div class="form-group">
                     <label for="deadline">Deadline</label>
-                    <input type="date" name="deadline" class="form-control" />
+                    <input
+                      type="date"
+                      name="deadline"
+                      class="form-control"
+                      id="todoDeadline"
+                    />
                   </div>
                 </form>
               </div>
@@ -83,6 +92,13 @@
                 </button>
               </div>
             </div>
+          </div>
+        </div>
+
+        <!-- Todo -->
+        <div class="container-fluid">
+          <div class="todos py-3 d-flex flex-wrap" style="gap: 20px">
+            <!-- Generate Todos here -->
           </div>
         </div>
       </div>
@@ -105,14 +121,86 @@
       crossorigin="anonymous"
     ></script>
     <script>
+      // form and btn
       const form = document.querySelector(".form");
       const submitBtn = document.querySelector(".submit-btn");
+      const todoWrapper = document.querySelector(".todos");
 
-      form.addEventListener("submit", (event) => {
+      // value in form
+      const todoSubject = document.querySelector("#todoSubject");
+      const todoMessage = document.querySelector("#todoMessage");
+      const todoDeadline = document.querySelector("#todoDeadline");
+
+      // submit form
+      const submitForm = async (event) => {
         event.preventDefault();
-      });
 
-      submitBtn.addEventListener("click", () => form.submit());
+        try {
+          const todos = await fetch("https://todo-api-ks5m.onrender.com", {
+            method: "POST",
+            headers: {
+              Accept: "application/json",
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              subject: todoSubject.value,
+              message: todoMessage.value,
+              deadline: todoDeadline.value,
+              status: false,
+            }),
+          });
+          console.log(await todos.json());
+          getTodos();
+        } catch (error) {
+          console.log(error.message);
+        }
+      };
+
+      const getTodos = async () => {
+        try {
+          const result = await fetch("https://todo-api-ks5m.onrender.com");
+          renderTodos(await result.json());
+        } catch (error) {
+          console.log(error.message);
+        }
+      };
+
+      const renderTodos = ({ todos }) => {
+        // remove all element in wrapper
+        todoWrapper.innerHTML = "";
+
+        console.log(typeof todos);
+
+        // render todos from array
+        todos.forEach((todo) => {
+          const card = document.createElement("div");
+          card.classList.add("card");
+          card.classList.add("shadow-sm");
+          card.classList.add("p3");
+
+          const cardBody = document.createElement("div");
+          cardBody.classList.add("card-body");
+          const cardTitle = document.createElement("h3");
+          cardTitle.classList.add("card-title");
+          const cardMessage = document.createElement("p");
+          cardMessage.classList.add("card-text");
+          cardMessage.classList.add("text-secondary");
+
+          cardTitle.innerText = todo.message;
+          cardMessage.innerText = todo.subject;
+
+          cardBody.appendChild(cardTitle);
+          cardBody.appendChild(cardMessage);
+
+          card.appendChild(cardBody);
+
+          todoWrapper.appendChild(card);
+        });
+      };
+
+      // subnmit form
+      submitBtn.addEventListener("click", submitForm);
+      getTodos();
     </script>
   </body>
 </html>
