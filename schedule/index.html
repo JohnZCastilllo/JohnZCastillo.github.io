@@ -165,7 +165,8 @@
     const schedule = document.querySelector(".schedule");
 
     //today's date.
-    const today = new Date(Date.now());
+    const today = () => new Date(Date.now());
+
     const days = [
       "sunday",
       "monday",
@@ -182,7 +183,9 @@
       viewAll();
 
       Object.keys(schedule.children).forEach((key) => {
-        if (!schedule.children[key].classList.contains(days[today.getDay()])) {
+        if (
+          !schedule.children[key].classList.contains(days[today().getDay()])
+        ) {
           schedule.children[key].classList.add("hide");
         }
       });
@@ -193,7 +196,7 @@
       // refresh list
       viewAll();
 
-      let now = today.getDay();
+      let now = today().getDay();
       let tom = now === 6 ? 0 : now + 1;
 
       Object.keys(schedule.children).forEach((key) => {
