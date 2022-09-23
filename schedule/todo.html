@@ -158,7 +158,9 @@
 
       const getTodos = async () => {
         try {
-          const result = await fetch("https://todo-api-ks5m.onrender.com");
+          const result = await fetch(
+            "https://lazy-teal-bighorn-sheep-gear.cyclic.app"
+          );
           renderTodos(await result.json());
         } catch (error) {
           console.log(error.message);
