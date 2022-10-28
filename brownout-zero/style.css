@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat&family=Poppins&display=swap");
+
+:root {
+  --main-color: #fca82a;
+  --cta-color: #00d88f;
+  --bebas: "Bebas Neue", cursive;
+  --monst: "Montserrat", sans-serif;
+  --poppins: "Poppins", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth !important;
+  scroll-padding-top: 95px !important;
+}
+
+* {
+  font-family: var(--poppins) !important;
+}
+#hero {
+  background-image: url("./images/panel2.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  min-height: 600px !important;
+}
+
+#logo {
+  width: 70px;
+  height: 70px;
+}
+
+.btn-cta {
+  background-color: var(--cta-color) !important;
+  color: white !important;
+  padding: 10px 20px !important;
+}
+
+.text-main {
+  font-family: var(--bebas) !important;
+}
+
+.color-main {
+  color: var(--main-color) !important;
+}
+.text-sub {
+  font-size: 1.333rem !important;
+  font-family: var(--monst) !important;
+}
+
+.text-major-1 {
+  font-size: 4.209rem !important;
+}
+.text-major-2 {
+  font-size: 3.157rem !important;
+}
+.text-major-3 {
+  font-size: 1.777rem !important;
+}
+.text-major-4 {
+  font-size: 1.333rem !important;
+}
+.man {
+  max-height: 400px !important;
+  width: auto !important;
+}
+.center-div {
+  height: 100%;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.card {
+  min-width: 250px !important;
+  max-width: 400px !important;
+  margin: auto !important;
+}
+
+.padding-b-1 {
+  padding-block: 4rem !important;
+}
+
+.icon {
+  width: 50px !important;
+  height: 50px !important;
+}
+
+.color-sub {
+  color: var(--cta-color);
+}
+
+.link {
+  text-decoration: none !important;
+}
+
+.link:hover {
+  color: var(--main-color) !important;
+}
