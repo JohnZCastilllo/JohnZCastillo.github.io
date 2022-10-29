@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Boostrap -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+    />
+
+    <!-- Custom css -->
+    <link rel="stylesheet" href="custom.css" />
+    <title>BSIT 3-4 | Class Schedule</title>
+  </head>
+  <body>
+    <!-- Container -->
+    <div class="container-fluid py-2" style="max-width: 1400px">
+      <h1 class="text-center">Schedule</h1>
+
+      <div class="d-flex flex-wrap align-items-center" style="gap: 5px">
+        <button class="btn btn-primary today">Today</button>
+        <button class="btn btn-warning tom">Tomorrow</button>
+        <button class="btn btn-secondary all">Schedule</button>
+        <a href="todo.html" class="btn btn-success">Todo</a>
+      </div>
+
+      <div class="schedule">
+        <!-- Monday -->
+        <div class="container-fluid my-3 monday">
+          <h3>Monday</h3>
+          <div class="table-responsive">
+            <table class="table table-striped table-bordered rounded">
+              <tr>
+                <th>Time</th>
+                <th>Subject</th>
+                <th>Type</th>
+                <th>Professor</th>
+              </tr>
+              <tr>
+                <td>7:00 am - 9:00 am</td>
+                <td>ITEC85</td>
+                <td>Lecture</td>
+                <td>Mr. Feranil</td>
+              </tr>
+              <tr>
+                <td>9:00 am - 12:00 pm</td>
+                <td>ITEC90</td>
+                <td>Laboratory</td>
+                <td>Mr. Advincula</td>
+              </tr>
+              <tr>
+                <td>4:30 pm - 6:30 pm</td>
+                <td>ITEC90</td>
+                <td>Lecture</td>
+                <td>Mr. Advincula</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+
+        <!-- Tuesday -->
+        <div class="container-fluid my-3 tuesday">
+          <h3>Tuesday</h3>
+          <div class="table-responsive">
+            <table class="table table-striped table-bordered rounded">
+              <tr>
+                <th>Time</th>
+                <th>Subject</th>
+                <th>Type</th>
+                <th>Professor</th>
+              </tr>
+              <tr>
+                <td>7:00 am - 9:00 am</td>
+                <td>INSY55</td>
+                <td>Lecture</td>
+                <td>Mr. Macapundag</td>
+              </tr>
+              <tr>
+                <td>9:00 am - 12:00 pm</td>
+                <td>INSY55</td>
+                <td>Laboratory</td>
+                <td>Mr. Macapundag</td>
+              </tr>
+              <tr>
+                <td>3:00 pm - 6:00 pm</td>
+                <td>ITEC80</td>
+                <td>Laboratory</td>
+                <td>Mx. Alfon</td>
+              </tr>
+              <tr>
+                <td>6:00 pm - 8:00 pm</td>
+                <td>DCIT26</td>
+                <td>Lecture</td>
+                <td>Mr. Asejo</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+
+        <!-- Wednesday -->
+        <div class="container-fluid my-3 wednesday">
+          <h3>Wednesday</h3>
+          <div class="table-responsive">
+            <table class="table table-striped table-bordered rounded">
+              <tr>
+                <th>Time</th>
+                <th>Subject</th>
+                <th>Type</th>
+                <th>Professor</th>
+              </tr>
+              <tr>
+                <td>7:00 am - 10:00 am</td>
+                <td>ITEC85</td>
+                <td>Laboratory</td>
+                <td>Mr. Feranil</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+
+        <!-- Thursday -->
+        <div class="container-fluid my-3 thursday">
+          <h3>Thursday</h3>
+          <div class="table-responsive">
+            <table class="table table-striped table-bordered rounded">
+              <tr>
+                <th>Time</th>
+                <th>Subject</th>
+                <th>Type</th>
+                <th>Professor</th>
+              </tr>
+              <tr>
+                <td>7:00 am - 10:00 am</td>
+                <td>DCIT60</td>
+                <td>Lecture</td>
+                <td>Ms. Banag</td>
+              </tr>
+              <tr>
+                <td>10:00 am - 12:00 pm</td>
+                <td>ITEC80</td>
+                <td>Lecture</td>
+                <td>Mx. Alfon</td>
+              </tr>
+              <tr>
+                <td>12:00 pm - 3:00 pm</td>
+                <td>DCIT26</td>
+                <td>Laboratory</td>
+                <td>Mr. Asejo</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    // Btn
+    const viewTodayBtn = document.querySelector(".today");
+    const viewAllBtn = document.querySelector(".all");
+    const viewTomBtn = document.querySelector(".tom");
+
+    // wrapper
+    const schedule = document.querySelector(".schedule");
+
+    //today's date.
+    const today = () => new Date(Date.now());
+
+    const days = [
+      "sunday",
+      "monday",
+      "tuesday",
+      "wednesday",
+      "thursday",
+      "friday",
+      "saturday",
+    ];
+
+    // hide schedule that are not for today
+    const viewScheduleToday = () => {
+      // refresh list
+      viewAll();
+
+      Object.keys(schedule.children).forEach((key) => {
+        if (
+          !schedule.children[key].classList.contains(days[today().getDay()])
+        ) {
+          schedule.children[key].classList.add("hide");
+        }
+      });
+    };
+
+    // hide schedule that are not for tomorrow
+    const viewScheduleTomorrow = () => {
+      // refresh list
+      viewAll();
+
+      let now = today().getDay();
+      let tom = now === 6 ? 0 : now + 1;
+
+      Object.keys(schedule.children).forEach((key) => {
+        if (!schedule.children[key].classList.contains(days[tom])) {
+          schedule.children[key].classList.add("hide");
+        }
+      });
+    };
+    // show all schedule
+    const viewAll = () => {
+      Object.keys(schedule.children).forEach((key) => {
+        schedule.children[key].classList.remove("hide");
+      });
+    };
+
+    // Setup event listener for btn
+    viewTodayBtn.addEventListener("click", viewScheduleToday);
+    viewAllBtn.addEventListener("click", viewAll);
+    viewTomBtn.addEventListener("click", viewScheduleTomorrow);
+  </script>
+</html>

@@ -1,0 +1,37 @@
+:root {
+  --poppins: "Poppins", sans-serif;
+}
+
+p {
+  font-size: 1.563rem !important;
+}
+
+h3 {
+  font-size: 1.953rem !important;
+}
+
+.profile {
+  max-width: 400px !important;
+  width: 90% !important;
+}
+
+.hero {
+  height: 100vh !important;
+  max-height: 700px !important;
+}
+
+.hero-text {
+  font-size: 3.052rem;
+  font-family: "Poppins", sans-serif;
+  color: #9cd579;
+}
+
+.text-poppins {
+  font-family: var(--poppins);
+}
+
+.img-skill {
+  width: 100%;
+  height: auto;
+  max-width: 150px;
+}
