@@ -1,0 +1,16 @@
+.history {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  height: 100vh;
+  max-height: 800px;
+}
+
+.history__img {
+  width: 400px;
+  height: 300px;
+}
+.history__txt {
+  width: 75ch;
+}
