@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <title>Just For Kicks</title>
+        <link rel="stylesheet" href="login.css" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap"
+          rel="stylesheet"
+        />
+      </head>
+      <body>
+        <div class="full-page">
+          <div class="sub-page">
+            <div class="navigation-bar">
+              <div class="logo">
+                <a href="photography.html">Just For Kicks</a>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-1">
+                <div class="form-box">
+                  <div class="form">
+                    <form class="login-form" onsubmit="login(event)">
+                      <center><h1 class="main-heading">Login Form</h1></center>
+                      <input type="text" placeholder="user name" required />
+                      <input type="password" placeholder="password" required />
+                      <button>LOGIN</button>
+                      <p class="message">
+                        Not Registered? <a href="#">Register</a>
+                      </p>
+                    </form>
+                    <form class="register-form">
+                      <center>
+                        <h1 class="main-heading">Register Form</h1>
+                      </center>
+                      <input type="text" placeholder="user name" required />
+                      <input type="text" placeholder="email-id" required />
+                      <input type="password" placeholder="password" required />
+                      <button>REGISTER</button>
+                      <p class="message">
+                        Already Registered?<a href="#">Login</a>
+                      </p>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <div class="col-1">
+                <br />
+                <br />
+                <p class="defination">
+                  Just for Kicks is the name of the shop created by the students
+                  of ITEC-50. It is a shop that sells a variety of branded
+                  shoes. Just for Kicks is a kind of site that is similar to an
+                  online shop that helps consumers buy shoes easily by just
+                  searching, picking, and purchasing the product using that
+                  site. It is also an example of E-Commerce that helps students
+                  improve their creativity and skills in doing this kind of
+                  site.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script>
+          $(".message a").click(function () {
+            $("form").animate({ height: "toggle", opacity: "toggle" }, "slow");
+          });
+
+          // redirect
+          function login(event) {
+            event.preventDefault();
+            window.location.replace("index.html");
+          }
+        </script>
+      </body>
+    </html>
+  </body>
+</html>

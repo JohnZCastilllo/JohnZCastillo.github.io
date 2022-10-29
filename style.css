@@ -1,0 +1,511 @@
+:root {
+  --f-color: #ffffff;
+  --f-header: "Montserrat", sans-serif;
+  --f-sub: "Open Sans", sans-serif;
+  --f-700: 700;
+}
+
+p {
+  font-family: var(--f-sub);
+}
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 89px;
+}
+
+/* Global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+/* Navigation */
+.nav {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-block: 1.2em;
+  background-color: white;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  box-shadow: 5px 0 2px 2px grey;
+}
+
+.fb {
+  margin-left: auto;
+  background-image: url("brands/facebook.png");
+  background-size: cover;
+  width: 30px;
+  height: 30px;
+}
+
+.nav__link {
+  color: black;
+  font-family: var(--f-sub);
+  margin-right: 20px;
+  font-size: 1.2rem;
+}
+
+/* Hero  */
+.hero {
+  padding-block: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.hero__text {
+  margin-right: 20px;
+}
+
+.hero__text > h1 {
+  font-family: var(--f-header);
+  font-weight: var(--f-700);
+  font-size: 3rem;
+}
+
+.hero__text > p {
+  font-family: var(--f-sub);
+}
+
+.hero__img {
+  width: 400px;
+  height: auto;
+  transform: rotate(20deg);
+}
+
+/* Featured Img */
+
+.featured__img {
+  width: 300px;
+  height: auto;
+}
+
+/* Collection */
+.collection {
+  padding-block: 50px;
+}
+
+/* Essential */
+.essential {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.essential > div > img {
+  border-radius: 10px;
+  width: 400px;
+  height: 300px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.essential > div {
+  position: relative;
+}
+
+.essential > div > a {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: black;
+}
+
+/* Explore */
+.explore {
+  padding-block: 50px;
+}
+
+.explore__room {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding-block: 10px;
+}
+
+/* Products */
+
+/* .products {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px 30px;
+  gap: 20px;
+  justify-content: center;
+} */
+
+/* Product style */
+
+/* .product {
+  display: grid;
+  width: 280px;
+  background-color: #a5e2a8;
+  box-shadow: 3px 3px 10px 2px grey;
+}
+
+.product__img {
+  max-width: 280px;
+  width: 100%;
+  height: 200px;
+}
+
+.product__text {
+  padding-inline: 20px;
+}
+
+.apart {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+}
+
+.product-title {
+  font-size: 1.2rem;
+  color: #000000;
+  font-family: var(--f-header);
+}
+.product-extra {
+  font-family: var(--f-sub);
+}
+
+.product-price {
+  font-size: 1.2rem;
+  font-family: var(--f-sub);
+  color: #132b25;
+} */
+
+/* .btn-cart {
+  width: 100%;
+  background-color: #ffffff;
+  color: #000000;
+  font-family: var(--f-header);
+  text-align: center;
+  display: inline-block;
+  padding-block: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+} */
+
+/* Helper */
+.contianer {
+  max-width: 1400px;
+  min-width: 320px;
+}
+
+.center {
+  margin: 0 auto;
+}
+
+.space-inline {
+  padding-inline: 2rem;
+}
+
+.space-block {
+  padding-block: 1rem;
+}
+
+.buy {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #2f3e46;
+  color: #ffffff;
+  font-family: var(--f-header);
+}
+
+.shop {
+  padding: 10px 20px;
+  color: white;
+  background-color: black;
+  border-radius: 20px;
+  font-family: var(--f-header);
+}
+
+.sub-header {
+  font-family: var(--f-sub);
+  font-size: 1rem;
+  color: #2f3e46;
+}
+
+.main-header {
+  font-family: var(--f-header);
+  font-size: 1.8rem;
+}
+
+.card {
+  width: 400px;
+  height: 300px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
+    rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
+    rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+/* about us */
+
+.center {
+  margin: 0 auto;
+}
+.box {
+  margin-top: 20px;
+  padding: 20px 30px;
+  width: 90%;
+}
+.box > h2 {
+  font-size: 2em;
+}
+
+/* Video */
+.video-holder {
+  position: relative;
+  height: 100vh;
+}
+
+.video-text {
+  position: absolute;
+  top: 40%;
+  left: 20px;
+  color: white;
+  font-family: var(--f-header);
+}
+.video-text > h2 {
+  font-size: 5rem;
+}
+.video-text > p {
+  font-size: 1.2rem;
+  font-family: var(--f-sub);
+}
+
+.video-link {
+  padding: 10px 10px;
+  background-color: white;
+  font-family: var(--f-header);
+  width: fit-content;
+}
+.video-link > a {
+  color: black;
+}
+.video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Brands */
+.brands {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  grid-template-columns: repeat(3, 1fr);
+  padding-inline: 5%;
+}
+
+.brand {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.brand > img {
+  width: 100%;
+  height: 200px;
+}
+
+.brand > h2 {
+  margin-top: 10px;
+  font-family: var(--f-header);
+}
+
+.brand > p {
+  font-family: var(--f-sub);
+}
+
+/* sections */
+.section-2 {
+  padding-block: 50px;
+}
+.section-3 {
+  padding-block: 50px;
+}
+
+.trending {
+  background-color: #dcf2ff;
+  padding-block: 100px;
+  background-image: url("shoes/road.jpg");
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+footer {
+  background-color: #131313;
+  color: white;
+  font-family: var(--f-sub);
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.footer__promo {
+  text-align: center;
+  padding-block: 20px;
+  background-color: #f9f871;
+  color: black;
+}
+
+.even {
+  background-color: #dcf2ff;
+}
+
+.full {
+  height: 100vh;
+}
+.half {
+  height: 50vh;
+}
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  padding-block: 10px;
+  justify-content: center;
+  color: white;
+}
+
+.footer-below {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-block: 20px;
+}
+
+footer > div > div > a {
+  font-size: 14px;
+}
+
+footer > div > div > h2 {
+  font-size: 1.2rem;
+}
+
+footer > div > div {
+  min-width: 200px;
+  max-width: 200px;
+  width: 100%;
+}
+
+.footer-top > div > a {
+  display: block;
+  color: white;
+}
+
+/* text title */
+.text-holder {
+  padding-block: 10px;
+  font-size: 2rem;
+  font-family: var(--f-header);
+  width: fit-content;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* contact us */
+.contact-box {
+  display: flex;
+}
+
+.contact-head {
+  display: inline-block;
+  width: 30%;
+  background-color: red;
+}
+.contact {
+  padding: 20px 10px;
+  background-color: #a5e2a8;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  background-image: url("icons/card.svg");
+  background-size: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.contact-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 10px solid blue;
+}
+
+.contact-details {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.contact-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contact-logo > img {
+  width: 100%;
+  height: auto;
+}
+.icon {
+  width: 40px;
+  height: 40px;
+}
+
+.logo {
+  width: 100px;
+  margin-right: 10px;
+}
+
+/* arrivals */
+.arrivals {
+  overflow: hidden;
+}
+
+.section {
+  height: 100vh;
+  max-height: 650px;
+}
+
+@media only screen and (max-width: 320px) {
+  .brands {
+    grid-template-columns: 1fr;
+  }
+}
+
+.buy_now {
+  display: inline-block;
+  border-radius: 5px;
+  margin-top: 5px;
+  background-color: #a5e2a8;
+  color: white;
+  padding: 10px 20px;
+  font-family: var(--f-header);
+}
