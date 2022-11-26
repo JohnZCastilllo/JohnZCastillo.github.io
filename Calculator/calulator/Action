@@ -1,0 +1,9 @@
+/*
+ * Represents Action for computing.
+ * Like Addition...
+ */
+
+@Functional Interface
+public interface Action{
+    public void process();
+}
